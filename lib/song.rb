@@ -59,7 +59,7 @@ class Song
     new_y
   end
   
-  def self.new_from_filename(filename)
+  def self.create_from_filename(filename)
     delimiters = [' - ', '.']
     a = filename.split(Regexp.union(delimiters))
     new_y = self.create
