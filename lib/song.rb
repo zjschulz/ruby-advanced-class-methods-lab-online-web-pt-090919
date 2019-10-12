@@ -58,5 +58,14 @@ class Song
     new_y.artist_name = a[0]
     new_y
   end
+  
+  def self.new_from_filename(filename)
+    delimiters = [' - ', '.']
+    a = filename.split(Regexp.union(delimiters))
+    new_y = self.create
+    new_y.name = a[1]
+    new_y.artist_name = a[0]
+    new_y
+  end
 
 end
